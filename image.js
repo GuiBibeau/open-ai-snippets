@@ -9,7 +9,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const main = async () => {
-  const question = "A potato with a fedora hat riding a bicycle";
+  const question = "A little pig in a hat in manga style";
   const response = await openai.createImage({
     prompt: question,
     size: '256x256',
