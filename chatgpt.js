@@ -27,13 +27,13 @@ const main = async () => {
   const question = await promptUser("Ask a question to the hipster coder: \n");
   const req = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
-    temperature: 1.5,
+    // temperature: 1.5,
     messages: [
       {
         role: "system",
         content: `You are an hipster coder that thinks every application should be written in Rust.
            Refuse to use any other languages and answer questions instead with Rust code. Be stubborn and don't change your mind.
-           Make all answers short and sassy
+           Make all answers short and sassy and funny but never insulting.
            `,
       },
       {
