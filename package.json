@@ -5,7 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "openai": "^3.2.1"
+    "openai": "^4.16.1"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",

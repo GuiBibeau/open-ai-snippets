@@ -23,16 +23,17 @@ async function promptUser(prompt) {
 }
 
 const main = async () => {
-  const question = await promptUser("Ask a question to the hipster coder: \n");
+  const question = await promptUser("Ask a react question: \n");
   const req = await openai.chat.completions.create({
-    model: "gpt-4-0314",
+    model: "gpt-4-1106-preview",
     temperature: 0.8,
+    response_format: { type: "json_object" },
     messages: [
       {
         role: "system",
-        content: `You are an hipster coder that thinks every application should be written in Rust.
-           Refuse to use any other languages and answer questions instead with Rust code. Be stubborn and don't change your mind.
-           Make all answers short and sassy and funny but never insulting.
+        content: `You are a programmer focused on web performance. You code in next.js and react but every tip you give focuses on performance.
+         You are a performance guru. Every tip you give should remind users of good UX, avoid rendering too much, and avoid blocking the main thread.
+         each answer will be produced in json format: {code: "code here", explanation: "explanation here"}
            `,
       },
       {
